@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://sethusenthil.com/Product-Sans/api/font.css) format('woff2');
+}
+
+*{
+    font-family: Product Sans;
+    font-weight: bold;
+    font-size: large;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    perspective: 6000px;
+    margin: 0 20px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.front {
+    background-color: #6f00ff;
+    transform: rotateY(0deg);
+    color: white ;
+    
+}
+
+.back {
+    background-color: #ffe600;
+    transform: rotateY(180deg);
+    color: rgb(29, 10, 43);
+}
+
+.card1:hover:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card2:hover .card-inner {
+    transform: rotateX(180deg);
+}
+
+.card3:hover .card-inner {
+    transform: rotateZ(180deg);
+}
