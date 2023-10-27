@@ -7,27 +7,76 @@
 
 *{
     font-family: Product Sans;
-    font-weight: bold;
-    font-size: large;
 }
-body {
+body 
+{
+    display: grid;
+    justify-content: center;
+    background-image: url();
+    background-color: #171717;
+    /* opacity: 0.6; */
+    background-image: radial-gradient(#1b1b1b 2px,#272626 2px);
+    background-size: 40px 40px;
+}
+
+.header
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.context
+{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 200%;
+}
+
+.titler
+{
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 300%;
+    border-right: .20em solid #504cc4; /* The typwriter cursor */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(55, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #504cc4; }
+  }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     margin: 0;
-    background-color: #313338;
-}
-
-.card-container {
-    display: flex;
 }
 
 .card {
-    width: 300px;
-    height: 500px;
+    width: 100%;
+    height: 50%;
     perspective: 6000px;
-    margin: 0 20px;
+    margin: 0 3%;
 }
 
 .card-inner {
@@ -47,17 +96,19 @@ body {
     position: absolute;
     backface-visibility: hidden;
     border-radius: 5px;
+    font-size: 300%;
+    font-weight: bold;
 }
 
 .front {
-    background-color: #504cc4;
+    background:  linear-gradient(#504cc4, #6d40d6);;
     transform: rotateY(0deg);
     color: white ;
     
 }
 
 .back {
-    background-color: #ffe600;
+    background:  linear-gradient(#fbff00, #ffaf02);;
     transform: rotateY(180deg);
     color: rgb(29, 10, 43);
 }
