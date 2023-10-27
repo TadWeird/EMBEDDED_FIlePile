@@ -12,7 +12,6 @@ body
 {
     display: grid;
     justify-content: center;
-    background-image: url();
     background-color: #171717;
     /* opacity: 0.6; */
     background-image: radial-gradient(#1b1b1b 2px,#272626 2px);
