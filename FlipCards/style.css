@@ -16,7 +16,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #313338;
 }
 
 .card-container {
@@ -50,7 +50,7 @@ body {
 }
 
 .front {
-    background-color: #6f00ff;
+    background-color: #504cc4;
     transform: rotateY(0deg);
     color: white ;
     
