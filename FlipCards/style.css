@@ -126,5 +126,5 @@ body
 .card3:hover .card-inner {
     /* transform: rotateX(90deg) rotateZ(90deg) rotateY(-90deg); */
     /* if not do this */
-    transform: rotateZ(90deg)
+    transform: rotateZ(180deg)
 }
